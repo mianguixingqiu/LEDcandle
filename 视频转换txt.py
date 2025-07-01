@@ -1,7 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 
-video_path = 'D:/Jupyter/函数生成火焰/火焰视频处理/fire.mp4'  # 替换为你的视频路径
+video_path = 'D:/your/video/path.mp4'  # 替换为你的视频路径
 x,y,w=1086,60,375
 h=w*2#裁剪区域的高,裁剪后应该是16*8
 #h=w#裁剪区域的高,裁剪后应该是8*8
@@ -9,7 +9,7 @@ step=w//8+1#采样步长,采样后应该是16*8
 jumpframe=10#前面跳过的帧数
 readframe=600#读取的帧数，适用于8*8
 readframe=300#读取的帧数，适用于16*8
-file_name = 'D:/Jupyter/函数生成火焰/火焰视频处理/fire.txt'
+txt_path = 'D:/your/txt/path.txt'
 
 # plt显示彩色图片,调试使用
 def plt_show0(img):
@@ -24,7 +24,7 @@ def plt_show(img):
 
 cap = cv2.VideoCapture(video_path)# 读取视频文件
 
-outfile= open(file_name, "w")#读取txt文件
+outfile= open(txt_path, "w")#读取txt文件
 for i in range(jumpframe):#跳过前面的帧
     ret, frame = cap.read()
 for i in range(readframe):#读取帧
@@ -60,7 +60,7 @@ for i in range(readframe):#读取帧
 cap.release()
 outfile.close()
 # 读取txt文件,删除最后一个逗号
-with open(file_name, 'r+') as f:
+with open(txt_path, 'r+') as f:
     content = f.read()
     f.seek(0)
     f.write(content[:-1])
