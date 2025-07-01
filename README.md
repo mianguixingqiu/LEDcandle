@@ -23,3 +23,8 @@ led驱动：[TM1640文档](https://atta.szlcsc.com/upload/public/pdf/source/2021
 ## 视频转换工具
 使用python来处理，需要安装opencv2，如果没有安装请使用`pip install opencv-python`
 
+两个示例视频，都是来源于B站。
+
+火焰视频来源：[B站](https://www.bilibili.com/video/BV1gZ4y1S7E6)up主：分享素材的小曼
+
+badapple视频来源：[B站](https://www.bilibili.com/video/BV1xx411c79H)up主：折射
