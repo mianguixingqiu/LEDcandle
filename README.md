@@ -23,6 +23,8 @@ led驱动：[TM1640文档](https://atta.szlcsc.com/upload/public/pdf/source/2021
 ## 视频转换工具
 使用python来处理，需要安装opencv2，如果没有安装请使用`pip install opencv-python`
 
+## 火焰生成函数
+使用python的matplotlib的库，主要使用指数函数和三次幂函数。之后再采样一下，就可以用于点阵火焰了。
 两个示例视频，都是来源于B站。
 
 火焰视频来源：[B站](https://www.bilibili.com/video/BV1gZ4y1S7E6)up主：分享素材的小曼
